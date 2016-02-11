@@ -51,9 +51,11 @@ public class CargarArchivos {
             for(int i=0; i< numeroTipos;i++){
                 deposito[i]=sc.nextInt();
             }
-            Warehouse almacenAuxiliar = new Warehouse(deposito,aCol,aFil,z);
+            Warehouse almacenAuxiliar = new Warehouse(deposito,new Position(aFil,aCol),z);
             listadoAlamacenes.add(almacenAuxiliar);
         }
+
+        
 
 
 

@@ -5,15 +5,14 @@ public class Warehouse {
 
 
     private int [] deposito;
-    private int cola;
-    private int fila;
     private int indentificador;
 
-    public Warehouse(int[] udeposito, int ucola, int ufila,int uindentificador){
+    private Position position;
+
+    public Warehouse(int[] udeposito, Position position,int uindentificador){
         this.deposito = udeposito;
-        this.cola = ucola;
-        this.fila = ufila;
-        this.indentificador= uindentificador;
+        this.position = position;
+        this.indentificador = uindentificador;
     }
 
     public void load(int identificador, int cantidad){
