@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -22,6 +24,8 @@ public class Problema {
     static int numeroPedidos;
 
     static ArrayList<Warehouse> listadoAlamacenes;
+
+    static ArrayList<Order> listadoPedidos;
 
     public static void main(String[] args){
 
@@ -60,6 +64,22 @@ public class Problema {
         //Cuarta Seccion: Informacion Pedidos
         numeroPedidos=sc.nextInt();
         for(int y =0; y < numeroPedidos; y++){
+            int pFil = sc.nextInt();
+            int pCol = sc.nextInt();
+            int objetosEntregar = sc.nextInt();
+
+            HashMap<Integer, Integer> store= new  HashMap<Integer, Integer>();
+            for(int o = 0; o<objetosEntregar;o++){
+                int code = sc.nextInt();
+                if (!store.containsKey(code)) {
+                    store.put(code, 0);
+                }
+                store.put(code, store.get(code)+1);
+            }
+
+            Order pedidoAuxiliar = new Order(new Position(pFil,pCol),store);
+            listadoPedidos.add(pedidoAuxiliar);
+
 
         }
 

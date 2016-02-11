@@ -1,12 +1,13 @@
+import java.util.HashMap;
 import java.util.List;
 
 
 public class Order {
 	
 	Position dest;
-	List<Store> store;
+    HashMap<Integer, Integer> store;
 	
-	public Order(Position dest,List<Store> store){
+	public Order(Position dest,HashMap<Integer, Integer> store){
 		this.dest=dest;
 		this.store=store;
 	}
