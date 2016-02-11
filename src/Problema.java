@@ -4,7 +4,7 @@ import java.util.Scanner;
 /**
  * Created by aron on 11/02/16.
  */
-public class CargarArchivos {
+public class Problema {
 
 
     static int filas;
@@ -19,10 +19,16 @@ public class CargarArchivos {
 
     static int numeroAlmacenes;
 
+    static int numeroPedidos;
+
     static ArrayList<Warehouse> listadoAlamacenes;
 
-
     public static void main(String[] args){
+
+    }
+
+
+    public static void cargarArchivo(String file){
         Scanner sc = new Scanner("fichero.txt");
 
         //Primera Seccion: Datos Generales
@@ -32,18 +38,14 @@ public class CargarArchivos {
         deadLine = sc.nextInt();
         cargaMaxima= sc.nextInt();
 
-        //Segunda Seccion: Numero de objetos diferentes
+        //Segunda Seccion: Informacion Objetos
         numeroTipos = sc.nextInt();
-
-        //Tercera Seccion: CargarPesos
         for(int i=0; i< numeroTipos;i++){
             pesos[i]=sc.nextInt();
         }
 
-        //Cuarta Seccion: Numero de almacenes
+        //Tercera Seccion: Informacion Almacenes
         numeroAlmacenes=sc.nextInt();
-
-        //Quinta Seccion: Informacion almacenes
         for(int z =0; z < numeroAlmacenes; z++){
             int aFil = sc.nextInt();
             int aCol = sc.nextInt();
@@ -55,8 +57,11 @@ public class CargarArchivos {
             listadoAlamacenes.add(almacenAuxiliar);
         }
 
-        
+        //Cuarta Seccion: Informacion Pedidos
+        numeroPedidos=sc.nextInt();
+        for(int y =0; y < numeroPedidos; y++){
 
+        }
 
 
 
