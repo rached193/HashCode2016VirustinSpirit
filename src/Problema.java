@@ -26,9 +26,11 @@ public class Problema {
     static ArrayList<Warehouse> listadoAlamacenes;
 
     static ArrayList<Order> listadoPedidos;
+    public int scoreAcumulado;
 
-    public static void main(String[] args){
-
+    public Problema(String file) {
+    	cargarArchivo(file);
+    	scoreAcumulado = 0;
     }
 
 

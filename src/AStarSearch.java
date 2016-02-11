@@ -186,7 +186,10 @@ public class AStarSearch {
                         if(current.value.equals(goal.value)){
                                 found = true;
                         }
-
+                        
+                        
+                        //generate every child of the current node (all possible combinations for time T)
+                        
                         //check every child of current node
                         for(Edge e : current.adjacencies){
                                 Node child = e.target;
