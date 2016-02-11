@@ -7,11 +7,13 @@ public class Warehouse {
     private int [] deposito;
     private int cola;
     private int fila;
+    private int indentificador;
 
-    public Warehouse(int[] udeposito, int ucola, int ufila){
+    public Warehouse(int[] udeposito, int ucola, int ufila,int uindentificador){
         this.deposito = udeposito;
         this.cola = ucola;
         this.fila = ufila;
+        this.indentificador= uindentificador;
     }
 
     public void load(int identificador, int cantidad){
